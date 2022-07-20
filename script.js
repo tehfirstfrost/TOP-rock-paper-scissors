@@ -1,18 +1,22 @@
  
-const playerSelection = prompt("Please Chose one: Rock, Paper, Scissors.").toLowerCase();
+//const playerSelection = prompt("Please Chose one: Rock, Paper, Scissors.").toLowerCase();
 const computerSelection = getComputerChoice();
 
 function game(){
     let compWin = 0;
     let playerWin = 0;
     let plays = 0;
+    let compChoice = computerSelection.toUpperCase();
 
     while(plays < 5){
-        if(playRound(playerSelection, computerSelection) === "You Lose."){
+        if(playRound(computerSelection) === "You Lose."){
+            alert(`You lost this round. The computer chose: ${compChoice}` );
             compWin += 1;
         }else{
+            alert(`You won this round! The computer chose: ${compChoice}`);
             playerWin += 1;
         }
+        
         plays++;
     }
 
@@ -23,8 +27,8 @@ function game(){
     }
 }
 
-function playRound(player, computer){
-
+function playRound(computer){
+    let player = prompt("Please Choose one: Rock Paper, Scissors.\nP.S. Tie goes to you.").toLowerCase(); 
     let result;
     
     if(player === computer){
@@ -44,8 +48,6 @@ function playRound(player, computer){
 
 }
 
-
-
 function getComputerChoice(){
 
     let choice = Math.floor(Math.random() * 3 ) + 1;
@@ -63,8 +65,6 @@ function getComputerChoice(){
     }
 
 }
-
-
 
 
 game();
