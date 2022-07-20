@@ -2,6 +2,26 @@
 const playerSelection = prompt("Please Chose one: Rock, Paper, Scissors.").toLowerCase();
 const computerSelection = getComputerChoice();
 
+function game(){
+    let compWin = 0;
+    let playerWin = 0;
+    let plays = 0;
+
+    while(plays < 5){
+        if(playRound(playerSelection, computerSelection) === "You Lose."){
+            compWin += 1;
+        }else{
+            playerWin += 1;
+        }
+        plays++;
+    }
+
+    if(compWin > playerWin){
+        alert(`You lost ${compWin} : ${playerWin}`)
+    }else{
+        alert(`YOU WIN! GG! ${playerWin} : ${compWin}`)
+    }
+}
 
 function playRound(player, computer){
 
@@ -47,4 +67,4 @@ function getComputerChoice(){
 
 
 
-console.log(playRound(playerSelection,computerSelection));
+game();
