@@ -38,12 +38,12 @@ round.appendChild(roundNum);
 
 const winPlus = document.createElement('div');
 winPlus.classList.add('win-count-sub');
-// winPlus.textContent = winCount;
+winPlus.textContent = winCount;
 wins.appendChild(winPlus);
 
 const losePlus = document.createElement('div');
 losePlus.classList.add('lose-count-sub');
-// losePlus.textContent = winCount;
+losePlus.textContent = winCount;
 loses.appendChild(losePlus);
 
 
@@ -82,7 +82,7 @@ function playRound(playerIn, computerSelection){
         (result === "You Lose.") ? loseCount++ : winCount++;
         losePlus.textContent = loseCount;
         winPlus.textContent = winCount;
-        whoWon.textContent = result;   
+ 
         console.log(result);
         console.log("wins: " +winCount+ "loses: :" + loseCount);
        break;
@@ -91,7 +91,7 @@ function playRound(playerIn, computerSelection){
         (result === "You Lose.") ? loseCount++ : winCount++;
         losePlus.textContent = loseCount;
         winPlus.textContent = winCount;
-        whoWon.textContent = result;   
+ 
         console.log(result);
         console.log("wins: " +winCount+ "loses: :" + loseCount);
         break;
@@ -100,41 +100,24 @@ function playRound(playerIn, computerSelection){
         (result === "You Lose.") ? loseCount++ : winCount++;
         losePlus.textContent = loseCount;
         winPlus.textContent = winCount;
-        whoWon.textContent = result;   
+
         console.log(result);
         console.log("wins: " +winCount+ "loses: :" + loseCount);
         break;
    }
   
-   displayResults.appendChild(whoWon);
+   if(winCount == 5 ){
+    whoWon.textContent = "YOU WON!";  
+    displayResults.appendChild(whoWon); 
+   }
+   if(loseCount == 5){
+    whoWon.textContent = "YOU LOST.";   
+    displayResults.appendChild(whoWon);
+   }
+
    roundNum.textContent = counter;
 }
 
 
 
-function game(){
-    let compWin = 0;
-    let playerWin = 0;
-    let plays = 0;
-   
 
-    // while(plays < 5){
-    //     if(playRound(computerSelection) === "You Lose."){
-    //         alert(`You lost this round. The computer chose: ${choice}` );
-    //         compWin += 1;
-    //     }else{
-    //         alert(`You won this round! The computer chose: ${choice}`);
-    //         playerWin += 1;
-    //     }
-        
-    //     plays++;
-    // }
-
-    if(compWin > playerWin){
-        alert(`You lost ${compWin} : ${playerWin}`)
-    }else{
-        alert(`YOU WIN! GG! ${playerWin} : ${compWin}`)
-    }
-}
-// game();
-console.log("wins: " +winCount+ "loses: :" + loseCount);

@@ -18,10 +18,20 @@ div{
 }
 
 button{
+    margin-left: 5px;
+    margin-right:5px;
+    padding: 5px;
     color: whitesmoke;
     background-color: brown;
 }
 
+.round{
+    font-size: 20px;
+}
+
+.roundNum{
+    font-size: 20px;
+}
 .winner{
     color: whitesmoke;
     background-color: brown;
@@ -37,17 +47,17 @@ button{
 }
 
 .wins{
-    border: 1px solid black;
+  
     padding-left: 3px;
     padding-right: 3px;
-    background-color: blanchedalmond;
+    
 }
 
 .lose{
     margin-left: 2px;
-    border-left: none;
-    border: 1px solid black;
+   
+   
     padding-left: 3px;
     padding-right: 3px;
-    background-color: blanchedalmond;
+    
 }
