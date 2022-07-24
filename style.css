@@ -1,0 +1,53 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+
+}
+
+div{
+    text-align: center;
+}
+
+
+.content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em;
+}
+
+button{
+    color: whitesmoke;
+    background-color: brown;
+}
+
+.winner{
+    color: whitesmoke;
+    background-color: brown;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+  
+}
+
+.wins{
+    border: 1px solid black;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: blanchedalmond;
+}
+
+.lose{
+    margin-left: 2px;
+    border-left: none;
+    border: 1px solid black;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: blanchedalmond;
+}
